@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>www.SumaMarket.com</title>
+  </head>
+  <body>
+    <header
+      class="w-full h-screen bg-gradient-to-b from-white via-[var(---lightgreen)] to-white overflow-hidden">
+      <!-- navbar -->
+      <nav
+        class="flex justify-between items-center px-8 md:py-4 xl:py-4 py-2 fixed top-4 left-4 right-4 shadow-xl backdrop-blur-sm rounded-full bg-[var(---lightgreen)]/50 z-50">
+        <div class="md:font-bold md:text-2xl text-2xl font-bold text-[var(---green)] select-none">
+          BoxMarket.com
+        </div>
+
+        <div
+          class="md:flex xl:flex hidden items-center border border-[var(---green)] text-[var(---darkgreen)] bg-[var(---lightgreen)] rounded-full w-auto md:w-max xl:w-max px-4 py-2 gap-2">
+          <input
+            type="text"
+            placeholder="What do you look for..."
+            class="w-full outline-none pr-6" />
+
+          <i class="fas fa-search text-2xl md:text-sm xl:text-sm"></i>
+        </div>
+
+        <!-- computer nav -->
+        <div
+          class="md:flex xl:flex hidden flex-col md:flex-row xl:flex-row md:gap-2 xl:gap-2 gap-4 text-[var(---green)] text-lg">
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fas fa-home"></i> Home
+          </button>
+
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fa-regular fa-bell"></i> Notifications
+          </button>
+
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fas fa-heart"></i>Favorites
+          </button>
+
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300 shadow-lg">
+            <i class="fa-regular fa-user"></i>Account
+          </button>
+        </div>
+
+        <!-- showmenue -->
+        <button
+          class="flex cursor-pointer justify-center items-center p-4 md:hidden xl:hidden bg-white rounded-full mobileMenuBtn transition-all duration-700">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+
+      <!-- mobile menue -->
+      <div
+        class="flex justify-evenly md:hidden xl:hidden gap-4 text-[var(---green)] fixed bottom-0 left-0 right-0 py-4 text-xl z-50">
+        <div
+          class="mobileMenu flex rounded-full bg-[var(---lightgreen)] w-full justify-evenly items-center py-2">
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </button>
+
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fas fa-bell"></i>
+            <span class="hidden">notication</span>
+          </button>
+
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fa-regular fa-heart"></i>
+            <span class="hidden"> favorites </span>
+          </button>
+        </div>
+        <button
+          class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="hidden">Cart</span>
+        </button>
+      </div>
+
+      <!-- hero section -->
+      <section
+        class="w-full h-full md:py-40 md:px-24 xl:py-40 xl:px-24 px-10 py-28 flex md:flex-row xl:flex-row flex-col md:gap-20 xl:gap-20 gap-8">
+        <div class="flex flex-col md:gap-4 xl:gap-4 md:max-w-1/2 xl:max-w-1/2">
+          <h1 class="md:text-6xl xl:text-6xl text-4xl font-bold text-[var(---green)] mb-6">
+            Welcome to BoxMarket.com
+          </h1>
+          <p class="text-xl text-[var(---darkgreen)] mb-8">
+            Your one-stop shop for all your needs. Discover a wide range of products at unbeatable
+            prices.
+          </p>
+          <button
+            class="px-6 py-3 bg-[var(---green)] text-[var(---darkgreen)] rounded-full w-max font-semibold hover:bg-[var(---lightgreen)] transition-all duration-300">
+            Shop Now
+          </button>
+        </div>
+
+        <!-- product slider -->
+        <div
+          class="flex justify-center overflow-x-scroll items-center md:w-[440px] xl:w-[440px] h-full px-14 flex-col">
+          <!-- slider -->
+          <div
+            class="w-[440px] h-full rounded-xl flex flex-nowrap gap-4 animate-[slide_20s_1s_linear_infinite] hover:[animation-play-state:paused]">
+            <article
+              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
+              <img
+                src="./images/apple.png"
+                alt="apple"
+                class="w-full h-full object-cover rounded-md" />
+              <span
+                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
+                <h1 class="text-xl">Fresh Apple</h1>
+                <ins class="text-[var(---green)]">$2.99</ins>
+                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
+                  <i class="fas fa-shopping-cart"></i> add to cart
+                </button>
+              </span>
+            </article>
+
+            <article
+              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
+              <img
+                src="./images/watch.png"
+                alt="watch"
+                class="w-full h-full object-cover rounded-md" />
+              <span
+                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
+                <h1 class="text-xl">Ultra watch</h1>
+                <ins class="text-[var(---green)]">$20.99</ins>
+                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
+                  <i class="fas fa-shopping-cart"></i> add to cart
+                </button>
+              </span>
+            </article>
+
+            <article
+              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
+              <img
+                src="./images/date.png"
+                alt="date"
+                class="w-full h-full object-cover rounded-md" />
+              <span
+                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
+                <h1 class="text-xl">Fresh Date</h1>
+                <ins class="text-[var(---green)]">$0.99</ins>
+                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
+                  <i class="fas fa-shopping-cart"></i> add to cart
+                </button>
+              </span>
+            </article>
+            <article
+              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
+              <img
+                src="./images/headphone.png"
+                alt="headphone"
+                class="w-full h-full object-cover rounded-md" />
+              <span
+                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
+                <h1 class="text-xl">Wireless Headphone</h1>
+                <ins class="text-[var(---green)]">$12.99</ins>
+                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
+                  <i class="fas fa-shopping-cart"></i> add to cart
+                </button>
+              </span>
+            </article>
+          </div>
+        </div>
+
+        <i
+          class="fas fa-chevron-down absolute md:bottom-12 xl:bottom-12 bottom-8 left-1/2 animate-bounce text-xl"></i>
+      </section>
+    </header>
+
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

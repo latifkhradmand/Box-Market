@@ -1,0 +1,33 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  /* buttons, links, icons */
+  ---green: #22c55e;
+  /* header, footer, imptext */
+  ---darkGreen: #14532d;
+  /* bg , heighlights */
+  ---lightgreen: #dcfce7;
+  /* discounts, cta btns */
+  ---orange: #f97316;
+  /* bookmarks, stars */
+  ---yellow: #facc15;
+}
+
+/* .slide {
+  animation: slide 4s linear infinite;
+} */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% * 4));
+  }
+}
+
+.mobileMenuActive span {
+  display: flex;
+}
