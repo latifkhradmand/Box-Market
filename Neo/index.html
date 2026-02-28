@@ -13,6 +13,27 @@
     <title>www.SumaMarket.com</title>
   </head>
   <body>
+    <!-- loader -->
+    <section
+      class="absolute w-full h-screen bg-[var(---lightgreen)] flex justify-center items-center z-60 loader">
+      <!-- From Uiverse.io by clarencedion -->
+      <div class="flex items-center justify-center min-h-screen bg-[var(---lightgreen)]">
+        <div class="relative">
+          <div class="relative w-32 h-32">
+            <div
+              class="absolute w-full h-full rounded-full border-[3px] border-gray-100/10 border-r-[var(---darkgreen)] border-b-[var(---orange)] animate-spin"
+              style="animation-duration: 3s"></div>
+
+            <div
+              class="absolute w-full h-full rounded-full border-[3px] border-gray-100/10 border-t-[var(---yellow)] animate-spin"
+              style="animation-duration: 2s; animation-direction: reverse"></div>
+          </div>
+
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-[#0ff]/10 via-transparent to-[#0ff]/5 animate-pulse rounded-full blur-sm"></div>
+        </div>
+      </div>
+    </section>
     <header
       class="w-full h-screen bg-gradient-to-b from-white via-[var(---lightgreen)] to-white overflow-hidden">
       <!-- navbar -->
@@ -127,72 +148,30 @@
 
         <!-- product slider -->
         <div
-          class="flex justify-center overflow-x-scroll items-center md:w-[440px] xl:w-[440px] h-full px-14 flex-col">
+          class="flex justify-center overflow-x-scroll items-center md:w-[440px] xl:w-[440px] h-full px-10 flex-col">
           <!-- slider -->
-          <div
-            class="w-[440px] h-full rounded-xl flex flex-nowrap gap-4 animate-[slide_20s_1s_linear_infinite] hover:[animation-play-state:paused]">
-            <article
-              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
-              <img
-                src="./images/apple.png"
-                alt="apple"
-                class="w-full h-full object-cover rounded-md" />
-              <span
-                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
-                <h1 class="text-xl">Fresh Apple</h1>
-                <ins class="text-[var(---green)]">$2.99</ins>
-                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
-                  <i class="fas fa-shopping-cart"></i> add to cart
-                </button>
-              </span>
-            </article>
+          <div class="slider" id="slider">
+            <div class="slides">
+              <div class="slide">
+                <img src="./images/apple.png" />
+              </div>
 
-            <article
-              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
-              <img
-                src="./images/watch.png"
-                alt="watch"
-                class="w-full h-full object-cover rounded-md" />
-              <span
-                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
-                <h1 class="text-xl">Ultra watch</h1>
-                <ins class="text-[var(---green)]">$20.99</ins>
-                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
-                  <i class="fas fa-shopping-cart"></i> add to cart
-                </button>
-              </span>
-            </article>
+              <div class="slide">
+                <img src="./images/date.png" />
+              </div>
 
-            <article
-              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
-              <img
-                src="./images/date.png"
-                alt="date"
-                class="w-full h-full object-cover rounded-md" />
-              <span
-                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
-                <h1 class="text-xl">Fresh Date</h1>
-                <ins class="text-[var(---green)]">$0.99</ins>
-                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
-                  <i class="fas fa-shopping-cart"></i> add to cart
-                </button>
-              </span>
-            </article>
-            <article
-              class="w-[440px] h-full bg-white flex justify-center items-center rounded-md relative shrink-0">
-              <img
-                src="./images/headphone.png"
-                alt="headphone"
-                class="w-full h-full object-cover rounded-md" />
-              <span
-                class="absolute bottom-0 left-0 p-4 px-8 rounded-md gap-2 bg-black/70 text-white flex flex-col text-center">
-                <h1 class="text-xl">Wireless Headphone</h1>
-                <ins class="text-[var(---green)]">$12.99</ins>
-                <button class="flex items-center gap-2 px-4 py-1 bg-[var(---orange)] rounded-full">
-                  <i class="fas fa-shopping-cart"></i> add to cart
-                </button>
-              </span>
-            </article>
+              <div class="slide">
+                <img src="./images/headphone.png" />
+              </div>
+              <div class="slide">
+                <img src="./images/watch.png" />
+              </div>
+            </div>
+
+            <button class="arrow prev">&#10094;</button>
+            <button class="arrow next">&#10095;</button>
+
+            <div class="dots"></div>
           </div>
         </div>
 
