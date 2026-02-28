@@ -58,20 +58,35 @@
 
         <!-- showmenue -->
         <button
-          class="flex cursor-pointer justify-center items-center p-4 md:hidden xl:hidden bg-white rounded-full mobileMenuBtn transition-all duration-700">
-          <i class="fas fa-bars"></i>
+          class="flex cursor-pointer justify-center items-center p-4 md:hidden xl:hidden bg-white rounded-full burgerBtn transition-all duration-700">
+          <i class="fas fa-bars transition-all duration-700"></i>
         </button>
       </nav>
 
+      <!-- burger menu detail -->
+      <div
+        class="fixed md:hidden xl:hidden top-24 right-8 rounded-xl backdrop-blur-sm bg-[var(---lightgreen)] p-4 burgerfullmnu translate-x-60 transition-all duration-700">
+        <ul>
+          <li
+            class="flex gap-2 px-4 py-2 transition-all duration-300 hover:text-[var(---darkgreen)]">
+            <a href="#"><i class="fas fa-user"></i> Account</a>
+          </li>
+          <li
+            class="flex gap-2 px-4 py-2 transition-all duration-300 hover:text-[var(---darkgreen)]">
+            <a href="#"><i class="fas fa-gear"></i> Setting</a>
+          </li>
+        </ul>
+      </div>
+
       <!-- mobile menue -->
       <div
-        class="flex justify-evenly md:hidden xl:hidden gap-4 text-[var(---green)] fixed bottom-0 left-0 right-0 py-4 text-xl z-50">
+        class="flex md:hidden xl:hidden gap-2 text-[var(---green)] fixed bottom-0 left-0 right-0 py-4 text-xl z-50">
         <div
           class="mobileMenu flex rounded-full bg-[var(---lightgreen)] w-full justify-evenly items-center py-2">
           <button
-            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300 mobileMenuActive">
             <i class="fas fa-home"></i>
-            <span>Home</span>
+            <span class="hidden">Home</span>
           </button>
 
           <button
@@ -82,7 +97,7 @@
 
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fa-regular fa-heart"></i>
+            <i class="fas fa-heart"></i>
             <span class="hidden"> favorites </span>
           </button>
         </div>

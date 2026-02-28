@@ -28,6 +28,14 @@
   }
 }
 
+.mobileMenuActive {
+  color: var(---darkGreen);
+  transition: all 0.5s ease;
+  background: var(---orange);
+}
+
 .mobileMenuActive span {
   display: flex;
+  color: var(---darkGreen);
+  transition: all 0.5s ease;
 }
