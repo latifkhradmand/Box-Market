@@ -16,7 +16,6 @@
     <!-- loader -->
     <section
       class="absolute w-full h-screen bg-[var(---lightgreen)] flex justify-center items-center z-60 loader">
-      <!-- From Uiverse.io by clarencedion -->
       <div class="flex items-center justify-center min-h-screen bg-[var(---lightgreen)]">
         <div class="relative">
           <div class="relative w-32 h-32">
@@ -58,7 +57,7 @@
           class="md:flex xl:flex hidden flex-col md:flex-row xl:flex-row md:gap-2 xl:gap-2 gap-4 text-[var(---green)] text-lg">
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fas fa-home"></i> Home
+            <i class="fa-regular fa-home"></i> Home
           </button>
 
           <button
@@ -68,7 +67,7 @@
 
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fas fa-heart"></i>Favorites
+            <i class="fa-regular fa-heart"></i>Favorites
           </button>
 
           <button
@@ -106,19 +105,19 @@
           class="mobileMenu flex rounded-full bg-[var(---lightgreen)] w-full justify-evenly items-center py-2">
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300 mobileMenuActive">
-            <i class="fas fa-home"></i>
+            <i class="fa-regular fa-home"></i>
             <span class="hidden">Home</span>
           </button>
 
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fas fa-bell"></i>
+            <i class="fa-regular fa-bell"></i>
             <span class="hidden">notication</span>
           </button>
 
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fas fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
             <span class="hidden"> favorites </span>
           </button>
         </div>
@@ -131,7 +130,7 @@
 
       <!-- hero section -->
       <section
-        class="w-full h-full md:py-40 md:px-24 xl:py-40 xl:px-24 px-10 py-28 flex md:flex-row xl:flex-row flex-col md:gap-20 xl:gap-20 gap-8">
+        class="w-full h-full md:py-40 md:px-24 xl:py-20 xl:px-24 px-10 py-28 flex md:flex-row xl:flex-row justify-center items-center flex-col md:gap-20 xl:gap-20 gap-8">
         <div class="flex flex-col md:gap-4 xl:gap-4 md:max-w-1/2 xl:max-w-1/2">
           <h1 class="md:text-6xl xl:text-6xl text-4xl font-bold text-[var(---green)] mb-6">
             Welcome to BoxMarket.com
@@ -148,23 +147,59 @@
 
         <!-- product slider -->
         <div
-          class="flex justify-center overflow-x-scroll items-center md:w-[440px] xl:w-[440px] h-full px-10 flex-col">
+          class="flex justify-center items-center overflow-hidden md:w-[440px] xl:w-[440px] w-full h-full">
           <!-- slider -->
           <div class="slider" id="slider">
             <div class="slides">
               <div class="slide">
                 <img src="./images/apple.png" />
+                <span
+                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  <h1 class="font-bold text-[var(---orange)] text-4xl">Fresh Apple</h1>
+                  <p class="text-2xl text-[var(---green)]">$12.45</p>
+                  <button
+                    class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[var(---orange)]">
+                    <i class="fas fa-shopping-cart"></i>Add to cart
+                  </button>
+                </span>
               </div>
 
               <div class="slide">
                 <img src="./images/date.png" />
+                <span
+                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  <h1 class="font-bold text-[var(---orange)] text-4xl">Fresh Date</h1>
+                  <p class="text-2xl text-[var(---green)]">$4.45</p>
+                  <button
+                    class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[var(---orange)]">
+                    <i class="fas fa-shopping-cart"></i>Add to cart
+                  </button>
+                </span>
               </div>
 
               <div class="slide">
                 <img src="./images/headphone.png" />
+                <span
+                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  <h1 class="font-bold text-[var(---orange)] text-4xl">Wirless Headphones</h1>
+                  <p class="text-2xl text-[var(---green)]">$200</p>
+                  <button
+                    class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[var(---orange)]">
+                    <i class="fas fa-shopping-cart"></i>Add to cart
+                  </button>
+                </span>
               </div>
               <div class="slide">
                 <img src="./images/watch.png" />
+                <span
+                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  <h1 class="font-bold text-[var(---orange)] text-4xl">Electirc Watch</h1>
+                  <p class="text-2xl text-[var(---green)]">$120.5</p>
+                  <button
+                    class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[var(---orange)]">
+                    <i class="fas fa-shopping-cart"></i>Add to cart
+                  </button>
+                </span>
               </div>
             </div>
 
