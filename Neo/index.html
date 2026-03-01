@@ -130,12 +130,13 @@
 
       <!-- hero section -->
       <section
-        class="w-full h-full md:py-40 md:px-24 xl:py-20 xl:px-24 px-10 py-28 flex md:flex-row xl:flex-row justify-center items-center flex-col md:gap-20 xl:gap-20 gap-8">
-        <div class="flex flex-col md:gap-4 xl:gap-4 md:max-w-1/2 xl:max-w-1/2">
-          <h1 class="md:text-6xl xl:text-6xl text-4xl font-bold text-[var(---green)] mb-6">
+        class="w-full h-full md:py-40 md:px-24 xl:py-20 xl:px-24 px-10 py-28 flex md:flex-row xl:flex-row justify-center items-center flex-col md:gap-20 xl:gap-20 gap-4">
+        <div class="flex flex-col md:gap-4 xl:gap-4 gap-0 md:max-w-1/2 xl:max-w-1/2">
+          <h1
+            class="md:text-6xl xl:text-6xl text-4xl font-bold text-[var(---green)] xl:mb-6 md:mb-6 mb-2">
             Welcome to BoxMarket.com
           </h1>
-          <p class="text-xl text-[var(---darkgreen)] mb-8">
+          <p class="text-xl text-[var(---darkgreen)] xl:mb-8 md:mb-8 mb-4">
             Your one-stop shop for all your needs. Discover a wide range of products at unbeatable
             prices.
           </p>
@@ -149,12 +150,14 @@
         <div
           class="flex justify-center items-center overflow-hidden md:w-[440px] xl:w-[440px] w-full h-full">
           <!-- slider -->
-          <div class="slider" id="slider">
-            <div class="slides">
+          <div
+            class="relative w-full hight-full max-w-[900px] rounded-md shadow-md shadow-black"
+            id="slider">
+            <div class="flex flex-row transition-transform duration-500" id="slides">
               <div class="slide">
-                <img src="./images/apple.png" />
+                <img src="./images/apple.png" class="w-full object-cover block" />
                 <span
-                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  class="absolute top-0 left-0 w-full h-full py-10 bg-black/30 flex justify-center items-center flex-col gap-2 productDetail opacity-0">
                   <h1 class="font-bold text-[var(---orange)] text-4xl">Fresh Apple</h1>
                   <p class="text-2xl text-[var(---green)]">$12.45</p>
                   <button
@@ -165,9 +168,9 @@
               </div>
 
               <div class="slide">
-                <img src="./images/date.png" />
+                <img src="./images/date.png" class="w-full object-cover block" />
                 <span
-                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  class="absolute top-0 left-0 w-full h-full py-10 bg-black/30 flex justify-center items-center flex-col gap-2 productDetail opacity-0">
                   <h1 class="font-bold text-[var(---orange)] text-4xl">Fresh Date</h1>
                   <p class="text-2xl text-[var(---green)]">$4.45</p>
                   <button
@@ -178,9 +181,9 @@
               </div>
 
               <div class="slide">
-                <img src="./images/headphone.png" />
+                <img src="./images/headphone.png" class="w-full object-cover block" />
                 <span
-                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  class="absolute top-0 left-0 w-full h-full py-10 bg-black/30 flex justify-center items-center flex-col gap-2 productDetail opacity-0">
                   <h1 class="font-bold text-[var(---orange)] text-4xl">Wirless Headphones</h1>
                   <p class="text-2xl text-[var(---green)]">$200</p>
                   <button
@@ -189,10 +192,11 @@
                   </button>
                 </span>
               </div>
+
               <div class="slide">
-                <img src="./images/watch.png" />
+                <img src="./images/watch.png" class="w-full object-cover block" />
                 <span
-                  class="absolute bottom-0 left-0 w-full h-20% py-10 bg-black/30 flex justify-center items-center flex-col gap-2">
+                  class="absolute top-0 left-0 w-full h-full py-10 bg-black/30 flex justify-center items-center flex-col gap-2 productDetail opacity-0">
                   <h1 class="font-bold text-[var(---orange)] text-4xl">Electirc Watch</h1>
                   <p class="text-2xl text-[var(---green)]">$120.5</p>
                   <button
