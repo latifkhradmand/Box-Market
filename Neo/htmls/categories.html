@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <title>www.BoxMarket.com || Categories</title>
+  </head>
+  <body>
+    <!-- loader -->
+    <section
+      class="absolute w-full h-screen bg-[var(---lightgreen)] flex justify-center items-center z-60 loader">
+      <div class="flex items-center justify-center min-h-screen bg-[var(---lightgreen)]">
+        <div class="relative">
+          <div class="relative w-32 h-32">
+            <div
+              class="absolute w-full h-full rounded-full border-[3px] border-gray-100/10 border-r-[var(---darkgreen)] border-b-[var(---orange)] animate-spin"
+              style="animation-duration: 3s"></div>
+
+            <div
+              class="absolute w-full h-full rounded-full border-[3px] border-gray-100/10 border-t-[var(---yellow)] animate-spin"
+              style="animation-duration: 2s; animation-direction: reverse"></div>
+          </div>
+
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-[#0ff]/10 via-transparent to-[#0ff]/5 animate-pulse rounded-full blur-sm"></div>
+        </div>
+      </div>
+    </section>
+
+    <header>
+      <nav
+        class="md:flex xl:flex hidden w-full backdrop-blur-xl flex-col justify-between p-4 absolute md:flex-row xl:flex-row md:gap-2 xl:gap-2 gap-4 text-[var(---green)] text-lg">
+        <button
+          class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+          <i class="fa-regular fa-home"></i> <a href="../index.html">Home</a>
+        </button>
+
+        <span class="flex gap-8">
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300 shadow-lg">
+            <i class="fa-regular fa-user"></i>Account
+          </button>
+          <button
+            class="flex px-4 items-center justify-center hover:text-[var(---orange)] duration-150 cursor-pointer">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </span>
+      </nav>
+      <section
+        class="min-h-screen w-full flex gap-8 p-6 pt-22 bg-gradient-to-b from-[var(---lightgreen)] via-white to-[var(---lightgreen)] items-start justify-center">
+        <aside class="flex flex-col p-2 gap-8 w-110 shadow-[inset_0_0_8px_black] rounded-xl">
+          <h1 class="text-4xl font-bold text-center text-[var(---green)]">Categories</h1>
+          <ul class="w-full h-max rounded-md text-lg categoryList" id="">
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-headphones"></i>Consumer Electronics </a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-kitchen-set"></i> Home & kitchen </a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-burger"></i> Food & Beverages </a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-hand-holding-medical"></i> Health & Personal Care </a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-paint-brush"></i> Beauty </a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-shirt"></i> Fashin & Apparel</a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-baby"></i> Baby & Kids</a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-basketball"></i> Sports & Outdoors </a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-tv"></i> Home Aplliance</a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-paperclip"></i> Office & School </a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-car"></i> Automotive</a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+            <li
+              class="flex justify-between items-center w-full px-4 hover:bg-white hover:scale-102 duration-200 rounded-md">
+              <a href="#" class="flex gap-2 text-start items-center py-2 w-full"
+                ><i class="fas fa-cat"></i> Pet Supplies</a
+              ><i class="fas fa-chevron-right"></i>
+            </li>
+          </ul>
+        </aside>
+        <div class="w-full h-full rounded-xl shadow-[inset_0_0_9px_black] flex p-4 flex-col gap-8">
+          <h1 class="text-4xl font-bold text-[var(---green)]" id="categoryTitle">
+            <a href="#" class="flex gap-2 text-start items-center"
+              ><i class="fas fa-headphones"></i>Consumer Electronics
+            </a>
+          </h1>
+          <!-- filtered item container -->
+          <div class="flex justify-start gap-4 px-8 w-full h-full flex-wrap" id="itemContainer">
+            <article
+              class="w-50 shrink-0 flex flex-col p-2 gap-2 rounded-xl overflow-hidden bg-white mt-4 shadow-xl">
+              <img src="../images/watch.png" class="w-full" alt="" />
+              <div>
+                <h1 class="font-bold">Smart Watch</h1>
+                <p class="text-sm">Lorem ipsumpisicing elit. Tempora, necessitatibus?</p>
+              </div>
+              <span class="font-semibold">price: $30 - $23</span>
+            </article>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <footer class="max-h-[60vh] flex flex-col gap-8 p-20 w-full bg-[var(---darkGreen)]">
+      <div class="flex gap-10 justify-between">
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Box Market</h1>
+          <p class="leading-loose">
+            Your one-step shop for all your needs. Discover quality products at unbeatable prices.
+          </p>
+        </div>
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Quick Links</h1>
+          <ul class="flex flex-col gap-2">
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Products</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Cart</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Deals</a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Customer Service</h1>
+          <ul class="flex flex-col gap-2">
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Shippings</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Returns</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Follow Us</h1>
+          <ul class="flex flex-col gap-2 text-xl">
+            <li class="hover:scale-120 duration-300 flex justify-center items-center w-max p-2">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-center items-center w-max p-2">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-center items-center w-max p-2">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-transparent border-t-white border-[1px] text-white text-center p-10">
+        <p>&copy; 2026 BoxMarket.com || All rights reservered</p>
+      </div>
+    </footer>
+
+    <script>
+      const categoryList = document.querySelectorAll(".categoryList a");
+      const categoryTitle = document.querySelector("#categoryTitle");
+      const itemContainer = document.querySelector("#itemContainer");
+
+      categoryList.forEach((item) => {
+        item.addEventListener("click", () => {
+          categoryTitle.innerHTML = item.innerHTML;
+          itemContainer.innerHTML = item.innerHTML;
+        });
+      });
+    </script>
+  </body>
+</html>

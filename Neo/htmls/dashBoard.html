@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <title>Personal ||Dashboard</title>
+  </head>
+  <body>
+    <!-- loader -->
+    <section
+      class="absolute w-full h-screen bg-[var(---lightgreen)] flex justify-center items-center z-60 loader">
+      <div class="flex items-center justify-center min-h-screen bg-[var(---lightgreen)]">
+        <div class="relative">
+          <div class="relative w-32 h-32">
+            <div
+              class="absolute w-full h-full rounded-full border-[3px] border-gray-100/10 border-r-[var(---darkgreen)] border-b-[var(---orange)] animate-spin"
+              style="animation-duration: 3s"></div>
+
+            <div
+              class="absolute w-full h-full rounded-full border-[3px] border-gray-100/10 border-t-[var(---yellow)] animate-spin"
+              style="animation-duration: 2s; animation-direction: reverse"></div>
+          </div>
+
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-[#0ff]/10 via-transparent to-[#0ff]/5 animate-pulse rounded-full blur-sm"></div>
+        </div>
+      </div>
+    </section>
+
+    <header>
+      <section class="h-screen w-full flex bg-[var(---green)]/50 items-start justify-center">
+        <aside
+          class="p-4 bg-white/30 flex flex-col gap-8 backdrop-blur-xl max-w-80 shrink-0 h-full">
+          <a href="../index.html">
+            <div class="flex h-12 gap-2 items-center w-full">
+              <img src="../images/logo.png" alt="" class="h-full rounded-full border-black" />
+              <h1 class="font-bold text-xl">BoxMarket.com</h1>
+            </div>
+          </a>
+
+          <!-- dashboard links -->
+          <ul class="flex flex-col gap-2" id="adminDashboardLinks">
+            <li
+              onclick="updateContent('overview')"
+              class="flex w-full items-center gap-2 p-2 bg-[var(---darkGreen)] hover:bg-[var(---darkGreen)] hover:text-white justify-start rounded-md text-white duration-200 cursor-pointer">
+              <i class="fas fa-chart-line"></i>Overview
+            </li>
+            <li
+              onclick="updateContent('suppliers')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-users"></i>Suppliers
+            </li>
+            <li
+              onclick="updateContent('customers')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-users"></i>Customers
+            </li>
+            <li
+              onclick="updateContent('popularProducts')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-star"></i>Popular Products
+            </li>
+            <li
+              onclick="updateContent('categories')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-list"></i>Categories
+            </li>
+            <li
+              onclick="updateContent('payments')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-usd"></i>Payments
+            </li>
+            <li
+              onclick="updateContent('shippings')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-hand-holding-usd"></i>Shippings
+            </li>
+            <li
+              onclick="updateContent('discounts')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-book"></i>Discounts & Coupons
+            </li>
+            <li
+              onclick="updateContent('settings')"
+              class="flex w-full items-center gap-2 p-2 hover:bg-[var(---darkGreen)] justify-start rounded-md hover:text-white duration-200 cursor-pointer">
+              <i class="fas fa-gear"></i>Settings
+            </li>
+          </ul>
+        </aside>
+        <!-- hero container -->
+        <div class="w-full h-full flex flex-col gap-2 relative justify-center items-center">
+          <nav
+            class="flex w-full backdrop-blur-sm justify-between items-center p-2 px-8 gap-4 text-[var(---darkGreen)] text-lg">
+            <button
+              class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300 font-bold">
+              <i class="fa-regular fa-home"></i> <a href="../index.html">Home</a>
+            </button>
+            <div class="h-10 w-max flex gap-4 justify-center items-center">
+              <label for="#dashboardProfileImg" class="text-xl font-bold cursor-pointer"
+                >Admin</label
+              >
+              <button
+                id="dashboardProfileImg"
+                class="h-full w-10 cursor-pointer rounded-full border hover:scale-105 duration-300 overflow-hidden">
+                <img src="../images/supplier2.png" class="h-full w-full" />
+              </button>
+            </div>
+          </nav>
+
+          <div
+            class="flex bg-gradient-to-br border-[var(---darkGreen)] from-[var(---lightgreen)]/0 to-[var(---lightgreen)]/100 backdrop-blur-xl w-full h-full z-1"
+            id="adminDashboardContent">
+            <section class="flex gap-2 flex-col w-full h-full p-2"></section>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <footer class="max-h-[60vh] flex flex-col gap-8 p-20 w-full bg-[var(---darkGreen)]">
+      <div class="flex gap-10 justify-between">
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Box Market</h1>
+          <p class="leading-loose">
+            Your one-step shop for all your needs. Discover quality products at unbeatable prices.
+          </p>
+        </div>
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Quick Links</h1>
+          <ul class="flex flex-col gap-2">
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Products</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Cart</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Deals</a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Customer Service</h1>
+          <ul class="flex flex-col gap-2">
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Shippings</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">Returns</a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-start items-center w-max">
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-white w-full flex flex-col gap-2">
+          <h1 class="font-bold text-2xl">Follow Us</h1>
+          <ul class="flex flex-col gap-2 text-xl">
+            <li class="hover:scale-120 duration-300 flex justify-center items-center w-max p-2">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-center items-center w-max p-2">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li class="hover:scale-120 duration-300 flex justify-center items-center w-max p-2">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-transparent border-t-white border-[1px] text-white text-center p-10">
+        <p>&copy; 2026 BoxMarket.com || All rights reservered</p>
+      </div>
+    </footer>
+
+    <script>
+      // const adminDashboardLinks = document.querySelectorAll("#adminDashboardLinks li");
+      // const adminDashboardLinksText = document.querySelectorAll("#adminDashboardLinks li a");
+      // const adminDashboardContent = document.querySelector("#adminDashboardContent");
+      // adminDashboardLinks.forEach((list) => {
+      //   list.addEventListener("click", () => {
+      //     adminDashboardLinks.forEach((list) => {
+      //       list.classList.remove("bg-[var(---darkGreen)]");
+      //       list.classList.remove("text-white");
+      //     });
+      //     list.classList.add("bg-[var(---darkGreen)]");
+      //     list.classList.add("text-white");
+      //   });
+      // });
+
+      // content js
+
+      // const dashboardOverviewTitles = [
+      //   { title: "total Products", total: 3420 },
+      //   { title: "Sold Prodcuts", total: 1120 },
+      //   { title: "Added Products", total: 213 },
+      //   { title: "Coupuns", total: 10 },
+      // ];
+      // const suppliers = [
+      //   {
+      //     supplierID: 1,
+      //     supplierRole: "top",
+      //     supplierImage: "../images/supplier.png",
+      //     supplierName: "Mahram",
+      //     supplierInfo: "this is my task for more",
+      //     supplierProduct: "200",
+      //     supplierCategory: "housing",
+      //     supplierShipping: "free",
+      //   },
+      //   {
+      //     supplierID: 2,
+      //     supplierRole: "new",
+      //     supplierImage: "../images/supplier.png",
+      //     supplierName: "Rohullah",
+      //     supplierInfo: "this is my task for more",
+      //     supplierProduct: "4203",
+      //     supplierCategory: "consumers",
+      //     supplierShipping: "free",
+      //   },
+      //   {
+      //     supplierID: 3,
+      //     supplierRole: "top",
+      //     supplierImage: "../images/supplier.png",
+      //     supplierName: "Ali Ullah",
+      //     supplierInfo: "this is my task for more",
+      //     supplierProduct: "1223",
+      //     supplierCategory: "consumer",
+      //     supplierShipping: "free",
+      //   },
+      //   {
+      //     supplierID: 4,
+      //     supplierRole: "top",
+      //     supplierImage: "../images/supplier.png",
+      //     supplierName: "farahmad",
+      //     supplierInfo: "this is my task for more",
+      //     supplierProduct: "2045",
+      //     supplierCategory: "home suppliemnt",
+      //     supplierShipping: "free",
+      //   },
+      //   {
+      //     supplierID: 5,
+      //     supplierRole: "top",
+      //     supplierImage: "../images/supplier.png",
+      //     supplierName: "Hanif",
+      //     supplierInfo: "this is my task for more",
+      //     supplierProduct: "3492",
+      //     supplierCategory: "home and kitchen",
+      //     supplierShipping: "free",
+      //   },
+      //   {
+      //     supplierID: 6,
+      //     supplierRole: "new",
+      //     supplierImage: "../images/supplier.png",
+      //     supplierName: "Rohullah",
+      //     supplierInfo: "this is my task for more",
+      //     supplierProduct: "4203",
+      //     supplierCategory: "consumers",
+      //     supplierShipping: "free",
+      //   },
+      // ];
+
+      // function updateContent(e) {
+      //   if (e === "overview") {
+      //     adminDashboardContent.innerHTML = `<section class="flex gap-4 flex-col w-full transition-all duration-300 ease-linear">
+      //         <div class="w-full h-70 flex justify-around items-center" id='overviewTitleContainer'>
+      //         </div>
+      //         <div class="w-full p-2 flex justify-around items-center">
+      //           <article
+      //             class="w-3/5 h-full shrink-0 rounded-xl p-2 text-white shadow-[0_10px_30px_rgba(0,_0,_0,_.5)] backdrop-blur-md bg-[var(---darkGreen)]/80 flex flex-col justify-center items-center gap-4">
+      //             <h1 class="font-bold drop-shadow-[0_0_8px_rgba(0,_0,_0,_.4)] text-xl text-center">
+      //               Top Suppliers
+      //             </h1>
+      //             <div class="w-full h-full flex justify-around" id="topSupplierContainer">
+      //             </div>
+      //           </article>
+      //           <article
+      //             class="w-1/5 shrink-0 rounded-xl p-2 text-white shadow-[0_10px_30px_rgba(0,_0,_0,_.5)] backdrop-blur-md bg-[var(---darkGreen)]/80 h-[80%] flex flex-col justify-center items-center gap-4">
+      //             <h1 class="font-bold drop-shadow-[0_0_8px_rgba(0,_0,_0,_.4)] text-xl text-center">
+      //               Total Suppliers
+      //             </h1>
+      //             <span
+      //               class="text-6xl drop-shadow-[0_0_10px_rgba(250,_250,_250,_.4)] font-bold text-[var(---darkGreen)]"
+      //               >${suppliers.length}</span
+      //             >
+      //           </article>
+      //         </div>
+      //       </section>`;
+      //     dashboardOverviewTitles.forEach((title) => {
+      //       const item = document.createElement("div");
+      //       item.classList =
+      //         "w-1/5 rounded-xl p-2 text-white shadow-[0_10px_30px_rgba(0,_0,_0,_.5)] backdrop-blur-md bg-[var(---darkGreen)]/80 h-[80%] flex flex-col justify-center items-center gap-4";
+      //       item.innerHTML = ` <h1 class="font-bold drop-shadow-[0_0_8px_rgba(0,_0,_0,_.4)] text-xl text-center">
+      //               ${title.title}
+      //             </h1>
+      //             <span
+      //               class="text-6xl drop-shadow-[0_0_10px_rgba(250,_250,_250,_.4)] font-bold text-[var(---darkGreen)]"
+      //               >${title.total}</span
+      //             >`;
+      //       document.querySelector("#overviewTitleContainer").appendChild(item);
+      //     });
+      //     suppliers.forEach((supplier) => {
+      //       if (supplier.supplierRole === "top") {
+      //         const container = document.createElement("div");
+      //         container.classList =
+      //           "w-1/5 h-full border gap-2 p-2 rounded-xl flex flex-col justify-around items-center";
+      //         container.innerHTML = ` <img src="${supplier.supplierImage}" class="w-14 rounded-full h-14" alt="" />
+      //                 <h1 class="font-bold text-xl">${supplier.supplierName}</h1>
+      //                 <p>${supplier.supplierInfo}</p>`;
+      //         document.querySelector("#topSupplierContainer").appendChild(container);
+      //       }
+      //     });
+      //   }
+      //   if (e === "suppliers") {
+      //     adminDashboardContent.innerHTML = `<section class="flex gap-2 flex-col w-full h-full p-2">
+      //         <nav class="w-full flex justify-center items-center p-2 gap-4">
+      //           <!-- searchBar -->
+      //           <div class="rounded-full border w-max flex">
+      //             <input
+      //               type="search"
+      //               name=""
+      //               id="supplierSearch"
+      //               class="outline-none p-2"
+      //               placeholder="Search for a supplier" />
+      //             <button
+      //               class="outline-none flex p-2 px-3 justify-center items-center hover:bg-[var(---darkGreen)] hover:text-white transition-all duration-300 cursor-pointer rounded-full">
+      //               <i class="fas fa-search"></i>
+      //             </button>
+      //           </div>
+      //           <div class="rounded-full w-max flex">
+      //             <button
+      //               class="p-1 rounded-full flex justify-center items-center text-xl cursor-pointer">
+      //               <i class="fas fa-filter"></i>
+      //             </button>
+      //           </div>
+      //         </nav>
+      //         <div
+      //           class="w-full max-h-130 border overflow-x-hidden flex flex-col gap-2 overflow-y-scroll rounded-xl">
+      //           <nav
+      //             class="flex justify-around w-full items-center p-2 rounded-t-xl bg-[var(---darkGreen)] text-white text-xl font-bold">
+      //             <h1>Profile</h1>
+      //             <h1>Category</h1>
+      //             <h1>Products</h1>
+      //             <h1>Shipping</h1>
+      //           </nav>
+      //           <div
+      //           id="supllierContainer"
+      //             class="w-full max-h-130 overflow-x-hidden flex flex-col p-2 gap-2 overflow-y-scroll rounded-xl">
+
+      //           </div>
+      //         </div>
+      //       </section>`;
+
+      //     suppliers.forEach((supplier) => {
+      //       const container = document.createElement("article");
+      //       container.classList =
+      //         "flex justify-between w-full items-center  rounded-xl bg-[var(---darkGreen)]/50 text-white";
+      //       container.innerHTML = `<div class="flex gap-4 items-center p-2 w-full">
+      //                 <span class="text-xl font-bold"> ${supplier.supplierID}</span>
+      //                 <img src="${supplier.supplierImage}" class="w-12 h-12 rounded-full border" />
+      //                 <h1 class="text-2xl font-bold">${supplier.supplierName}</h1>
+      //               </div>
+      //               <span class="w-full items-center flex justify-center text-lg">${supplier.supplierCategory}</span>
+      //               <span class="w-full items-center flex justify-center text-lg">${supplier.supplierProduct}</span>
+      //               <span class="w-full items-center flex justify-center text-lg">${supplier.supplierShipping}</span>`;
+      //       document.querySelector("#supllierContainer").appendChild(container);
+      //     });
+      //   }
+      //   if (e === "customers") {
+      //     adminDashboardContent.innerHTML = e;
+      //   }
+      //   if (e === "popularProducts") {
+      //     adminDashboardContent.innerHTML = e;
+      //   }
+      //   if (e === "categories") {
+      //     adminDashboardContent.innerHTML = e;
+      //   }
+      //   if (e === "payments") {
+      //     adminDashboardContent.innerHTML = e;
+      //   }
+      //   if (e === "shippings") {
+      //     adminDashboardContent.innerHTML = e;
+      //   }
+      //   if (e === "discounts") {
+      //     adminDashboardContent.innerHTML = e;
+      //   }
+      //   if (e === "settings") {
+      //     adminDashboardContent.innerHTML = e;
+      //   }
+      // }
+      // updateContent("overview");
+    </script>
+  </body>
+</html>
